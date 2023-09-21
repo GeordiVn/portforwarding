@@ -1,0 +1,25 @@
+﻿<Window x:Class="PortForwarder.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PortForwarder"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Margin="10,142,0,0" Height="280" VerticalAlignment="Top" HorizontalAlignment="Left" Width="780">
+
+        <Border BorderBrush="Black"  BorderThickness="1">
+
+            <Rectangle Fill="White">
+
+            </Rectangle>
+        </Border>
+        <TextBox x:Name="textBoxInfo" AcceptsReturn="True" IsReadOnly="True" HorizontalAlignment="Center" Width="780" Height="280" VerticalAlignment="Top">
+
+        </TextBox>
+        <Label Content="Info" HorizontalAlignment="Left" Margin="0,-31,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBoxListIpRemote" Margin="0,-110,550,0" TextWrapping="Wrap"  VerticalAlignment="Top" Height="79" HorizontalAlignment="Right" Width="230"/>
+        <Label Content="Remote ip,port list. Example 192.168.0.101:8080;" HorizontalAlignment="Left" Margin="0,-136,0,0" VerticalAlignment="Top"/>
+        <Button Content="Start" x:Name="buttonStartPortMapper" HorizontalAlignment="Left" Margin="752,-25,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
