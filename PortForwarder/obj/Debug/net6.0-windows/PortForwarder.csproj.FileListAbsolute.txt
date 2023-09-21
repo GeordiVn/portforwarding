@@ -19,3 +19,4 @@ C:\Users\geord\source\repos\PortForwarder\PortForwarder\obj\Debug\net6.0-windows
 C:\Users\geord\source\repos\PortForwarder\PortForwarder\obj\Debug\net6.0-windows\PortForwarder.genruntimeconfig.cache
 C:\Users\geord\source\repos\PortForwarder\PortForwarder\obj\Debug\net6.0-windows\ref\PortForwarder.dll
 C:\Users\geord\source\repos\PortForwarder\PortForwarder\bin\Debug\net6.0-windows\IpPortList.txt
+C:\Users\geord\source\repos\PortForwarder\PortForwarder\obj\Debug\net6.0-windows\PortForwarder_Content.g.cs

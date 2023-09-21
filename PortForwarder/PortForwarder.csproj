@@ -12,9 +12,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="IpPortList.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
+    <Content Include="IpPortList.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>

@@ -5,21 +5,58 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PortForwarder"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid Margin="10,142,0,0" Height="280" VerticalAlignment="Top" HorizontalAlignment="Left" Width="780">
+        Title="MainWindow" Height="548" Width="900">
+    <Grid Height="auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="auto" Background="WhiteSmoke">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Border Grid.Row="3" Margin="0,20,0,0" Grid.RowSpan="3" Grid.Column="1" Grid.ColumnSpan="10" BorderBrush="Black" BorderThickness="1">
+            <TextBox x:Name="textBoxInfo"  Background="White" Grid.Row="3" Grid.RowSpan="3" Grid.Column="1" Grid.ColumnSpan="10">
 
-        <Border BorderBrush="Black"  BorderThickness="1">
-
-            <Rectangle Fill="White">
-
-            </Rectangle>
+            </TextBox>
         </Border>
-        <TextBox x:Name="textBoxInfo" AcceptsReturn="True" IsReadOnly="True" HorizontalAlignment="Center" Width="780" Height="280" VerticalAlignment="Top">
+        <Border BorderBrush="Black" BorderThickness="1" Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="3">
+            <TextBox x:Name="textBoxListIpRemote" Background="White" Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="3"></TextBox>
+            
+        </Border>
+        <Label Content="Local -> Remote list" Grid.Column="1" VerticalAlignment="Bottom" Grid.ColumnSpan="2"></Label>
 
-        </TextBox>
-        <Label Content="Info" HorizontalAlignment="Left" Margin="0,-31,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textBoxListIpRemote" Margin="0,-110,550,0" TextWrapping="Wrap"  VerticalAlignment="Top" Height="79" HorizontalAlignment="Right" Width="230"/>
-        <Label Content="Remote ip,port list. Example 192.168.0.101:8080;" HorizontalAlignment="Left" Margin="0,-136,0,0" VerticalAlignment="Top"/>
-        <Button Content="Start" x:Name="buttonStartPortMapper" HorizontalAlignment="Left" Margin="752,-25,0,0" VerticalAlignment="Top"/>
+        <Label Content="Add new rule" Margin="30,0,0,0" Grid.Row="1" Grid.Column="5" Grid.ColumnSpan="2"></Label>
+
+        <Label Content="Local" Margin="50,30,0,0" Grid.Row="1" Grid.Column="4" Grid.ColumnSpan="2"></Label>
+        
+        <Label Grid.Row="2"  Grid.Column="4" Content="Ip"></Label>
+        <TextBox x:Name="addLocalIpTextBox" Height="15" Margin="2,0,2,0"  Grid.Row="2" Grid.Column="4"></TextBox>
+        <Label Grid.Row="2" Grid.Column="5" Content="Port"></Label>
+        <TextBox x:Name="addLocalPortTextBox" Height="15" Margin="2,0,0,0"  Grid.Row="2" Grid.Column="5"></TextBox>
+
+        <Label Content="Remote" Margin="50,30,0,0" Grid.Row="1" Grid.Column="6" Grid.ColumnSpan="2"></Label>
+        <Label Grid.Row="2"  Grid.Column="6" Content="Ip"></Label>
+        <TextBox x:Name="addRemoteIpTextBox" Height="15" Margin="2,0,2,0"  Grid.Row="2" Grid.Column="6"></TextBox>
+        <Label Grid.Row="2" Grid.Column="7" Content="Port"></Label>
+        <TextBox x:Name="addRemotePortTextBox" Height="15" Margin="2,0,0,0"  Grid.Row="2" Grid.Column="7"></TextBox>
+        <Button x:Name="buttonAddRule" Grid.Column="5" Grid.Row="2" Grid.ColumnSpan="2" Margin="0,50,0,0" Height="20" Content="Add"></Button>
+
+        <Button x:Name="buttonStart" Grid.Column="9" Grid.Row="2" Grid.ColumnSpan="2" Margin="0,50,0,0" Height="20" Content="Start Listening"></Button>
     </Grid>
 </Window>
